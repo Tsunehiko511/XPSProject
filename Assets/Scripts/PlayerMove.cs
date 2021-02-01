@@ -16,8 +16,7 @@ public class PlayerMove : MonoBehaviour
     {
         inputX = Input.GetAxis("Horizontal");
         inputZ = Input.GetAxis("Vertical");
-        Debug.Log(transform.forward);
-        transform.position += (transform.forward * inputZ + transform.right * inputX)*Time.deltaTime*5;
+        transform.position += (transform.forward * inputZ + transform.right * inputX)*Time.deltaTime;
 
         animator.SetFloat("inputX", inputX);
         animator.SetFloat("inputZ", inputZ);
